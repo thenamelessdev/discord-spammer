@@ -19,7 +19,7 @@ def send_message():
     body = {
         "content": message
     }
-    request = requests.post("https://discord.com/api/v10/channels/", channelid, "/messages", headers=headers, json=body)
+    request = requests.post(f"https://discord.com/api/v10/channels/{channelid}/messages", headers=headers, json=body)
     print(request)
 
 send_message()
