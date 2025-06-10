@@ -22,4 +22,5 @@ def send_message():
     request = requests.post(f"https://discord.com/api/v10/channels/{channelid}/messages", headers=headers, json=body)
     print(request)
 
-send_message()
+while true:
+    send_message()
