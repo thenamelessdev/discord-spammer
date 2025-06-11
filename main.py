@@ -29,9 +29,10 @@ def jointhenleave():
     print(join)
     time.sleep(0.5)
     leave = requests.delete(f"https://discord.com/api/invites/{invite}", headers=headers)
+    print(leave)
     
 
-spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer")
+spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer: ")
 
 if spammer == "1": 
     channelid = input("Write the target channel ID here: ")
