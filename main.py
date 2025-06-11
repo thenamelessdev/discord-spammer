@@ -41,6 +41,19 @@ def createguild():
     creareserver = requests.post("https://discord.com/api/guilds", headers=headers, json=body)
     print(creareserver)
 
+def createchannel():
+    headers = {
+        "Authorization": token
+    }
+    body = {
+        "name": name,
+        "type": "GUILD_TEXT"
+    }
+    request = requests.post(f"https://discord.com/api/v10/guilds/{serverid}/channels", headers=headers, json=body)
+    print(request)
+
+
+
 spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers. Answer here: ")
 
 if spammer == "1": 
@@ -57,5 +70,11 @@ elif spammer == "3":
     while True:
         createguild()
         time.sleep(1)
+elif spammer == "4":
+    print("Make sure that you have the manage channels premission.")
+    serverid = input("What is the server ID of the taeget server: ")
+    name = input("What should be the channel name: ")
+    while True:
+        createchannel()
 else:
     print("Please choose between 1, 2, and 3.")
