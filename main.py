@@ -30,9 +30,18 @@ def jointhenleave():
     time.sleep(0.5)
     leave = requests.delete(f"https://discord.com/api/invites/{invite}", headers=headers)
     print(leave)
-    
 
-spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer: ")
+def createguild():
+    headers = {
+        "Authorization": token
+    }
+    body = {
+        "name": name
+    }
+    creareserver = requests.post("https://discord.com/api/guilds", headers=headers, json=body)
+    print(creareserver)
+
+spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers. Answer here: ")
 
 if spammer == "1": 
     channelid = input("Write the target channel ID here: ")
@@ -43,3 +52,10 @@ elif spammer == "2":
     invite = input("Put the server invite code here: ")
     while True:
         jointhenleave()
+elif spammer == "3":
+    name = input("What should be the server name: ")
+    while True:
+        createguild()
+        time.sleep(1)
+else:
+    print("Please choose between 1, 2, and 3.")
