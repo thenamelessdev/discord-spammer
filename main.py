@@ -41,6 +41,16 @@ def createguild():
     creareserver = requests.post("https://discord.com/api/guilds", headers=headers, json=body)
     print(creareserver)
 
+def createrole():
+    headers = {
+        "Authorization": token
+    }
+    body = {
+        "name": name
+    }
+    request = requests.post(f"https://discord.com/api/v10/guilds/{guildid}/role", headers=headers, json=body)
+    print(request)
+
 def createchannel():
     headers = {
         "Authorization": token
@@ -54,7 +64,8 @@ def createchannel():
 
 
 
-spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers. Answer here: ")
+
+spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers 4: Role spammer. Answer here: ")
 
 if spammer == "1": 
     channelid = input("Write the target channel ID here: ")
@@ -76,5 +87,9 @@ elif spammer == "4":
     name = input("What should be the channel name: ")
     while True:
         createchannel()
+elif spammer == "5":
+    print("Make sure that you have the manage roles premission")
+    guildid = input("What is the guild ID: ")
+    name = ("What should be the name of the role: ")
 else:
     print("Please choose between 1, 2, and 3.")
