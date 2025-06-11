@@ -12,3 +12,4 @@ Fist get your user token and paste it into the token.txt file
 Then open the terminal in the same folder as the things in
 And then write `python main.py` and hit enter
 Fill the questions and it will be working
+Have fun!
