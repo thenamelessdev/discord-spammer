@@ -8,11 +8,10 @@ file_path = os.path.join(script_dir, "token.txt")
 with open(file_path, "r") as file:
     token = file.read()
 
-
+channelid = input("Write the target channel ID here: ")
+message = input("What should be the message? Type it here: ")
 
 def send_message():
-    channelid = input("Write the target channel ID here: ")
-    message = input("What should be the message? Type it here: ")
     headers = {
         "Authorization": token
     }
