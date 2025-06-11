@@ -18,3 +18,4 @@ Have fun!
 
 # What can you do
 You can spam a channel
+You can spam join and leave a server to spam the welcomer bot (coming)
