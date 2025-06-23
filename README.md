@@ -11,15 +11,15 @@ This is a message spammer on discord made with python. This uses API requests an
 - If you are scared sharing your user token then you can use the webhook spammer with just your webhook url.
 
 # How to use it
-Fist get your user token and paste it into the token.txt file
-Then open the terminal in the same folder as the things in
-And then write `python main.py` and hit enter
-Fill the questions and it will be working
-Have fun!
+- Fist get your user token and paste it into the token.txt file
+- Then open the terminal in the same folder as the things in
+- And then write `python main.py` and hit enter
+- Fill the questions and it will be working
+- Have fun!
 
 # What can you do
-You can spam a channel
-You can spam join and leave a server to spam the welcomer bot
-Make servers
-Spam channel maker
-Webhook spammer
+- You can spam a channel
+- You can spam join and leave a server to spam the welcomer bot
+- Make servers
+- Spam channel maker
+- Webhook spammer
