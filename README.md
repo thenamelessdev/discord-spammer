@@ -8,6 +8,7 @@ This is a message spammer on discord made with python. This uses API requests an
 - You need to install pthon at https://python.org if you don't have python.
 - To ping a role then use the <@&ROLE ID> format and replace the ROLE ID with the role ID.
 - To ping everyone just simply type @everone and make sure that you have the right premissions.
+- If you are scared sharing your user token then you can use the webhook spammer with just your webhook url.
 
 # How to use it
 Fist get your user token and paste it into the token.txt file
@@ -18,4 +19,7 @@ Have fun!
 
 # What can you do
 You can spam a channel
-You can spam join and leave a server to spam the welcomer bot (coming)
+You can spam join and leave a server to spam the welcomer bot
+Make servers
+Spam channel maker
+Webhook spammer
