@@ -23,3 +23,4 @@ This is a message spammer on discord made with python. This uses API requests an
 - Make servers
 - Spam channel maker
 - Webhook spammer
+- Webhook maker
