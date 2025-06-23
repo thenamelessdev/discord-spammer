@@ -64,6 +64,15 @@ def deletewebhook():
     request = requests.delete(url)
     print(request)
 
+def createwebhook():
+    body = {
+        "name": name
+    }
+    headers = {
+        "Authorization": token
+    }
+    request = requests.post(f"https://discord.com/api/v10/channels/{channelid}/webhooks", json=body, headers=headers)
+
 spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers 4: Channel maker 5: Webhook spammer (not uses your user token). Answer here: ")
 
 if spammer == "1": 
@@ -92,6 +101,12 @@ elif spammer == "5":
     while True:
         sendwebhookmsg()
         time.sleep(0.5)
+elif spammer == "6":
+    name = input("Type the webhook name here: ")
+    channelid = input("Type the channel ID here: ")
+    while True:
+        createwebhook()
+        time.sleep(0.1)
 
 else:
     print(f"{spammer} is not in the list.")
