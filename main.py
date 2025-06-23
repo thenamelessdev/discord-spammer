@@ -89,9 +89,9 @@ elif spammer == "4":
 elif spammer == "5":
     url = input("Paste your webhook link here: ")
     msg = input("Type the message here: ")
-    for i in range(100):
+    while True:
         sendwebhookmsg()
-        time.sleep(0.1)
-    deletewebhook()
+        time.sleep(0.5)
+
 else:
     print(f"{spammer} is not in the list.")
