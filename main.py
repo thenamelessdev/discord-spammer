@@ -62,10 +62,18 @@ def createchannel():
     request = requests.post(f"https://discord.com/api/v10/guilds/{serverid}/channels", headers=headers, json=body)
     print(request)
 
+def sendwebhookmsg():
+    body = {
+        "content": msg
+    }
+    request = requests.post(url, json=body)
+    print(request)
 
+def deletewebhook():
+    request = requests.delete(url)
+    print(request)
 
-
-spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers 4: Role spammer. Answer here: ")
+spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers 4: Role spammer 5: Webhook spammer (not uses your user token). Answer here: ")
 
 if spammer == "1": 
     channelid = input("Write the target channel ID here: ")
@@ -88,8 +96,11 @@ elif spammer == "4":
     while True:
         createchannel()
 elif spammer == "5":
-    print("Make sure that you have the manage roles premission")
-    guildid = input("What is the guild ID: ")
-    name = ("What should be the name of the role: ")
+    url = input("Paste your webhook link here: ")
+    msg = input("Type the message here: ")
+    for i in range(100):
+        sendwebhookmsg()
+        time.sleep(0.1)
+    deletewebhook()
 else:
-    print("Please choose between 1, 2, and 3.")
+    print(f"{spammer} is not in the list.")
