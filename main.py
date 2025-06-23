@@ -41,15 +41,6 @@ def createguild():
     creareserver = requests.post("https://discord.com/api/guilds", headers=headers, json=body)
     print(creareserver)
 
-def createrole():
-    headers = {
-        "Authorization": token
-    }
-    body = {
-        "name": name
-    }
-    request = requests.post(f"https://discord.com/api/v10/guilds/{guildid}/role", headers=headers, json=body)
-    print(request)
 
 def createchannel():
     headers = {
@@ -73,7 +64,7 @@ def deletewebhook():
     request = requests.delete(url)
     print(request)
 
-spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers 4: Role spammer 5: Webhook spammer (not uses your user token). Answer here: ")
+spammer = input("What spammer would you like to use? 1: Message spammer 2: Join-then-leave spammer 3: Make servers 4: Channel maker 5: Webhook spammer (not uses your user token). Answer here: ")
 
 if spammer == "1": 
     channelid = input("Write the target channel ID here: ")
